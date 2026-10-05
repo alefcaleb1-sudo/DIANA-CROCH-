@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Diana Crochê — Site teste</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#faa596;--brown:#a67153;--white:#fffdfc;--black:#171313;--soft:#fff1ee}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;padding:14px;background:#fff;color:var(--black);font-family:"DM Sans",sans-serif}a{text-decoration:none;color:inherit}img{display:block;width:100%}
+.shell{max-width:1500px;margin:auto;border:1px solid #f6d5ce;border-radius:24px;overflow:hidden;background:var(--white)}
+header{height:88px;padding:0 4vw;display:grid;grid-template-columns:180px 1fr 180px;align-items:center;gap:25px}
+.brand{display:flex;flex-direction:column;align-items:center;color:var(--brown);font:37px/0.75 Italiana}.brand small{margin-top:9px;font:600 8px DM Sans;letter-spacing:.42em}
+nav{display:flex;justify-content:center;gap:clamp(18px,3vw,45px)}nav a{font-size:12px;padding:10px 0;position:relative}nav a:after{content:"";position:absolute;left:50%;right:50%;bottom:0;height:1px;background:var(--pink);transition:.2s}nav a:hover:after{left:0;right:0}
+.ig{justify-self:end;padding:11px 15px;border-radius:10px;background:var(--pink);color:white;font-size:10px;font-weight:600}
+.hero{min-height:575px;display:grid;grid-template-columns:48% 52%;background:var(--soft);position:relative}.hero-copy{padding:70px 5.5vw 70px 8vw;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.eyebrow{margin:0 0 20px;color:var(--brown);font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+h1,h2,h3{font-family:Italiana,serif;font-weight:400}h1{margin:0 0 26px;color:var(--brown);font-size:clamp(83px,9vw,145px);line-height:.7;letter-spacing:-.065em;text-align:center}h1 small{display:block;margin-top:22px;font:500 14px DM Sans;letter-spacing:.55em}
+.phrase{font:italic clamp(19px,2.2vw,31px)/1.5 Italiana;margin:8px 0 30px 3vw}.phrase strong{color:var(--brown);font-weight:400}
+.btn{display:inline-flex;align-items:center;gap:14px;min-height:45px;padding:12px 20px;border-radius:999px;background:var(--pink);color:white;font-size:10px;font-weight:600}.btn.out{background:transparent;color:var(--brown);border:1px solid var(--pink)}
+.hero .btn{margin-left:6vw}.hero-img{overflow:hidden;position:relative}.hero-img img{height:100%;object-fit:cover;filter:saturate(.62) sepia(.08)}.label{position:absolute;right:25px;bottom:25px;background:white;color:var(--brown);padding:10px 15px;border-radius:999px;font-size:9px;letter-spacing:.12em}
+section{scroll-margin-top:30px}.collections{padding:72px 4.5vw 90px}.title-row{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}.title{display:flex;align-items:center;gap:14px}.title span{color:var(--pink);font:25px Italiana}.title h2,.favorite h2{margin:0;font-size:clamp(45px,5vw,72px);line-height:1;letter-spacing:-.05em}.desc{max-width:440px;margin:20px 0 0 39px;color:var(--brown);font-size:12px;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.card{border:1px solid #f6d5ce;border-radius:22px;overflow:hidden}.card-img{aspect-ratio:1.08;margin:8px;overflow:hidden;border-radius:16px}.card-img img{height:100%;object-fit:cover;transition:.5s}.card:hover img{transform:scale(1.04)}.info{padding:9px 15px 18px;display:flex;justify-content:space-between;align-items:end}.info h3{margin:0 0 4px;font-size:26px}.info p{margin:0;color:var(--brown);font-size:9px}
+.about{padding:55px 5vw 105px;display:grid;grid-template-columns:42% 58%;align-items:center;gap:5vw}.about p{max-width:500px;font-size:13px;line-height:1.7}.highlight{color:var(--brown);font-weight:600}.about-img{height:490px;padding:7px;border:2px solid var(--pink);border-radius:28px}.about-img img{height:100%;object-fit:cover;border-radius:20px;filter:saturate(.65) sepia(.08)}
+.favorite{margin:0 4.5vw 85px;min-height:430px;display:grid;grid-template-columns:48% 52%;overflow:hidden;border-radius:28px;background:#fbd8d1}.favorite-img{min-height:430px}.favorite-img img{height:100%;object-fit:cover;filter:saturate(.72)}.favorite-copy{padding:7vw;display:flex;flex-direction:column;justify-content:center}.favorite-copy p:not(.eyebrow){max-width:430px;font-size:13px;line-height:1.7}
+.benefits{margin:0 2.5vw 22px;padding:30px;display:grid;grid-template-columns:repeat(4,1fr) 1.4fr;gap:15px;border-radius:26px;background:#fbe1dc}.benefit{text-align:center}.benefit .sym{display:block;color:var(--brown);font:37px Italiana;margin-bottom:10px}.benefit p{font-size:10px;line-height:1.5}.igbox{padding:23px;border-radius:22px;background:#f8bdb2;text-align:center;font-size:10px}.igbox a{display:inline-block;background:white;color:var(--brown);padding:8px 13px;border-radius:999px}
+footer{padding:30px 4.5vw;display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;color:var(--brown);font-size:9px;align-items:center}.footer-brand{font:25px Italiana}.foot-center{text-align:center}.foot-right{text-align:right}.copy{text-align:center;grid-column:1/-1;color:var(--pink)}
+.product{display:none;padding:55px 4.5vw}.product.active{display:block}.back{color:var(--brown);font-size:10px}.product-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:6vw;margin-top:35px}.main-photo{aspect-ratio:.94;border-radius:26px;overflow:hidden}.main-photo img{height:100%;object-fit:cover}.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}.thumbs button{padding:4px;border:1px solid transparent;background:white;border-radius:15px}.thumbs button.sel{border-color:var(--pink)}.thumbs img{aspect-ratio:1;object-fit:cover;border-radius:10px}.product h2{font-size:clamp(62px,6.6vw,105px);margin:20px 0}.intro{color:var(--brown);font:clamp(21px,2vw,28px)/1.45 Italiana}.product-copy p{font-size:13px;line-height:1.75}.specs{border-top:1px solid #f4c7bf;margin:30px 0}.spec{padding:15px 0;border-bottom:1px solid #f4c7bf;display:grid;grid-template-columns:115px 1fr;gap:20px;font-size:11px}.spec b{color:var(--brown);font-size:9px;letter-spacing:.12em;text-transform:uppercase}.reviews{margin:70px 0 0;padding:70px 4.5vw;background:var(--soft)}.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.review{padding:28px;min-height:220px;border:1px solid #f4d2cb;border-radius:20px;background:white}.stars{color:var(--brown)}.review p{font:18px/1.55 Italiana!important}.close{margin-top:35px}
+@media(max-width:850px){body{padding:7px}header{grid-template-columns:1fr auto;height:75px}.ig{display:none}nav{display:none}.hero,.about,.favorite,.product-grid{grid-template-columns:1fr}.hero{min-height:auto}.hero-copy{padding:65px 8vw}.hero-img{height:390px}.grid{grid-template-columns:1fr 1fr}.benefits{grid-template-columns:1fr 1fr}.igbox{grid-column:1/-1}.about-img{height:380px}.favorite-img{min-height:320px}.title-row{align-items:flex-start;flex-direction:column}.footer{grid-template-columns:1fr}.review-grid{grid-template-columns:1fr}}
+@media(max-width:540px){.grid{grid-template-columns:1fr}.benefits{grid-template-columns:1fr}.favorite{margin-left:2vw;margin-right:2vw}.product{padding:35px 5vw}.product h2{font-size:65px}}
+</style>
+</head>
+<body>
+<main class="shell">
+<header>
+<a class="brand" href="#inicio">Diana<small>CROCHÊ</small></a>
+<nav><a href="#inicio">Início</a><a href="#sobre">Sobre nós</a><a href="#colecoes">Coleções</a><a href="#bastidores">Bastidores</a><a href="#contato">Contato</a></nav>
+<a class="ig" href="https://www.instagram.com/ale_.britz/" target="_blank">◎ Loja no Instagram</a>
+</header>
+
+<div id="home">
+<section class="hero" id="inicio">
+<div class="hero-copy"><p class="eyebrow">Crochê feito com tempo e carinho</p><h1>Diana<small>CROCHÊ</small></h1><p class="phrase">Feito à mão, feito com amor,<br><strong>feito para você.</strong></p><a class="btn" href="#colecoes">Conheça nossas coleções →</a></div>
+<div class="hero-img"><img src="https://images.unsplash.com/photo-1686285961015-12886f9b3bf5?auto=format&fit=crop&w=1500&q=92"><span class="label">feito ponto por ponto</span></div>
+</section>
+
+<section class="collections" id="colecoes">
+<div class="title-row"><div><div class="title"><span>✧</span><h2>Coleções</h2><span>♡</span></div><p class="desc">Peças para vestir, decorar, presentear e guardar com carinho.</p></div><a class="btn out" href="#favoritos">Ver todas as peças →</a></div>
+<div class="grid">
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1686285961015-12886f9b3bf5?auto=format&fit=crop&w=800&q=88"></div><div class="info"><div><h3>Bolsas de crochê</h3><p>Para levar afeto</p></div>→</div></div>
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1753370241607-5d48d8aaa70e?auto=format&fit=crop&w=800&q=88"></div><div class="info"><div><h3>Amigurumis</h3><p>Companheiros feitos à mão</p></div>→</div></div>
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1502245610427-c7abdffde91b?auto=format&fit=crop&w=800&q=88"></div><div class="info"><div><h3>Mesa posta</h3><p>Sousplats e detalhes especiais</p></div>→</div></div>
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1753879118115-8f25ef6af5b8?auto=format&fit=crop&w=800&q=88"></div><div class="info"><div><h3>Tapetes</h3><p>Textura para todos os cantos</p></div>→</div></div>
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1575414003591-ece8d0416c7a?auto=format&fit=crop&w=800&q=88"></div><div class="info"><div><h3>Decoração</h3><p>Casa bonita e acolhedora</p></div>→</div></div>
+<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1662459342443-1fb56cdc6473?auto=format&fit=crop&w=800&q=88"></div><div class="info"><div><h3>Roupas e acessórios</h3><p>Crochê para vestir e sentir</p></div>→</div></div>
+</div>
+</section>
+
+<section class="about" id="sobre"><div><div class="title"><h2>Sobre a Diana Crochê</h2><span>♡</span></div><p>A Diana Crochê nasceu de uma inspiração muito especial: a relação entre mãe e filha. Diana é a mãe que dá nome e significado a este projeto — uma presença que representa carinho, dedicação e afeto.</p><p>A ideia de criar a loja partiu de sua filha, que encontrou no crochê uma forma de transformar criatividade e cuidado em peças únicas, feitas à mão e cheias de história.</p><p class="highlight">Mais que uma loja, uma história de afeto.</p><a class="btn" href="#bastidores">Nossa história completa →</a></div><div class="about-img" id="bastidores"><img src="https://images.unsplash.com/photo-1608643761787-4e8e132a7c8c?auto=format&fit=crop&w=1200&q=88"></div></section>
+
+<section class="favorite" id="favoritos"><a class="favorite-img" href="#" onclick="showProduct();return false"><img src="https://images.unsplash.com/photo-1638427291164-b4adea2f7b96?auto=format&fit=crop&w=1100&q=88"></a><div class="favorite-copy"><p class="eyebrow">Favorito da estação</p><h2>Bolsa Jardim</h2><p>Flores feitas uma a uma transformam esta bolsa em um pequeno jardim para carregar todos os dias.</p><a class="btn" href="#" onclick="showProduct();return false">Ver detalhes →</a></div></section>
+
+<section class="benefits"><div class="benefit"><span class="sym">◌</span><p>Peças feitas<br><b>à mão</b></p></div><div class="benefit"><span class="sym">♡</span><p>Produção<br><b>artesanal</b></p></div><div class="benefit"><span class="sym">⌁</span><p>Design autoral<br><b>e exclusivo</b></p></div><div class="benefit"><span class="sym">✿</span><p>Feito com amor<br><b>para você</b></p></div><div class="igbox"><p>Acompanhe novidades,<br>bastidores e lançamentos.</p><a href="https://www.instagram.com/ale_.britz/" target="_blank">@ale_.britz</a></div></section>
+</div>
+
+<section class="product" id="product">
+<a class="back" href="#" onclick="showHome();return false">← Voltar para coleções</a>
+<div class="product-grid"><div><div class="main-photo"><img id="mainImg" src="https://images.unsplash.com/photo-1638427291164-b4adea2f7b96?auto=format&fit=crop&w=1400&q=90"></div><div class="thumbs"><button class="sel" onclick="changeImg(this,0)"><img src="https://images.unsplash.com/photo-1638427291164-b4adea2f7b96?auto=format&fit=crop&w=500&q=90"></button><button onclick="changeImg(this,1)"><img src="https://images.unsplash.com/photo-1686285961015-12886f9b3bf5?auto=format&fit=crop&w=500&q=90"></button><button onclick="changeImg(this,2)"><img src="https://images.unsplash.com/photo-1747856056384-ba35f5ed353d?auto=format&fit=crop&w=500&q=90"></button><button onclick="changeImg(this,3)"><img src="https://images.unsplash.com/photo-1700171394718-2457b1190444?auto=format&fit=crop&w=500&q=90"></button></div></div>
+<div class="product-copy"><p class="eyebrow">Favorito da estação</p><h2>Bolsa Jardim</h2><p class="intro">Uma pequena celebração da natureza, criada ponto por ponto para acompanhar histórias, encontros e dias especiais.</p><p>A Bolsa Jardim é uma peça artesanal de crochê que combina textura, delicadeza e personalidade. Suas flores são produzidas individualmente e aplicadas à mão, tornando cada bolsa verdadeiramente única.</p><div class="specs"><div class="spec"><b>Material</b><span>Fio de algodão macio e resistente</span></div><div class="spec"><b>Acabamento</b><span>Flores aplicadas à mão e forro interno</span></div><div class="spec"><b>Características</b><span>Alças confortáveis, peça leve e formato estruturado</span></div><div class="spec"><b>Criação</b><span>Produção artesanal em pequena escala</span></div></div><a class="btn" href="https://www.instagram.com/ale_.britz/" target="_blank">Conversar sobre a peça →</a></div></div>
+</section>
+<section class="reviews" id="reviews"><div class="title-row"><div><p class="eyebrow">Impressões de quem escolheu</p><div class="title"><h2>Feita para encantar</h2></div></div><p class="desc">Avaliações ilustrativas criadas para demonstração deste protótipo.</p></div><div class="review-grid"><article class="review"><div class="stars">★★★★★</div><p>“Os detalhes das flores são ainda mais delicados de perto. A bolsa tem um acabamento lindo e dá para sentir o cuidado em cada ponto.”</p><b>Marina A.</b></article><article class="review"><div class="stars">★★★★★</div><p>“Uma peça muito especial e com personalidade. Ficou perfeita tanto com looks leves quanto em ocasiões mais arrumadas.”</p><b>Clara M.</b></article><article class="review"><div class="stars">★★★★☆</div><p>“A textura é maravilhosa e o tamanho é ótimo para o dia a dia. Gostei muito da combinação das cores e do forro.”</p><b>Beatriz R.</b></article></div><div class="close"><a class="btn out" href="#" onclick="showHome();return false">← Voltar para a loja</a></div></section>
+
+<footer id="contato"><a class="footer-brand" href="#inicio">Diana Crochê</a><p class="foot-center">Peças únicas, feitas com tempo.</p><a class="foot-right" href="mailto:oi@dianacroche.com.br">oi@dianacroche.com.br</a><span class="copy">© 2025 · Todos os direitos reservados</span></footer>
+</main>
+<script>
+const imgs=[
+"https://images.unsplash.com/photo-1638427291164-b4adea2f7b96?auto=format&fit=crop&w=1400&q=90",
+"https://images.unsplash.com/photo-1686285961015-12886f9b3bf5?auto=format&fit=crop&w=1400&q=90",
+"https://images.unsplash.com/photo-1747856056384-ba35f5ed353d?auto=format&fit=crop&w=1400&q=90",
+"https://images.unsplash.com/photo-1700171394718-2457b1190444?auto=format&fit=crop&w=1400&q=90"];
+function showProduct(){document.getElementById('home').style.display='none';document.querySelector('.product').classList.add('active');document.getElementById('reviews').style.display='block';window.scrollTo(0,0)}
+function showHome(){document.getElementById('home').style.display='block';document.querySelector('.product').classList.remove('active');document.getElementById('reviews').style.display='none';window.scrollTo(0,0)}
+function changeImg(btn,i){document.getElementById('mainImg').src=imgs[i];document.querySelectorAll('.thumbs button').forEach(b=>b.classList.remove('sel'));btn.classList.add('sel')}
+document.getElementById('reviews').style.display='none';
+</script>
+</body></html>
