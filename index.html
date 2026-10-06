@@ -3,85 +3,707 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Diana Crochê — Site teste</title>
+<title>Diana Crochê — Vitrine Afetiva & Ateliê</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Italiana&display=swap" rel="stylesheet">
 <style>
-:root{--pink:#faa596;--brown:#a67153;--white:#fffdfc;--black:#171313;--soft:#fff1ee}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;padding:14px;background:#fff;color:var(--black);font-family:"DM Sans",sans-serif}a{text-decoration:none;color:inherit}img{display:block;width:100%}
-.shell{max-width:1500px;margin:auto;border:1px solid #f6d5ce;border-radius:24px;overflow:hidden;background:var(--white)}
-header{height:88px;padding:0 4vw;display:grid;grid-template-columns:180px 1fr 180px;align-items:center;gap:25px}
-.brand{display:flex;flex-direction:column;align-items:center;color:var(--brown);font:37px/0.75 Italiana}.brand small{margin-top:9px;font:600 8px DM Sans;letter-spacing:.42em}
-nav{display:flex;justify-content:center;gap:clamp(18px,3vw,45px)}nav a{font-size:12px;padding:10px 0;position:relative}nav a:after{content:"";position:absolute;left:50%;right:50%;bottom:0;height:1px;background:var(--pink);transition:.2s}nav a:hover:after{left:0;right:0}
-.ig{justify-self:end;padding:11px 15px;border-radius:10px;background:var(--pink);color:white;font-size:10px;font-weight:600}
-.hero{min-height:575px;display:grid;grid-template-columns:48% 52%;background:var(--soft);position:relative}.hero-copy{padding:70px 5.5vw 70px 8vw;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
-.eyebrow{margin:0 0 20px;color:var(--brown);font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
-h1,h2,h3{font-family:Italiana,serif;font-weight:400}h1{margin:0 0 26px;color:var(--brown);font-size:clamp(83px,9vw,145px);line-height:.7;letter-spacing:-.065em;text-align:center}h1 small{display:block;margin-top:22px;font:500 14px DM Sans;letter-spacing:.55em}
-.phrase{font:italic clamp(19px,2.2vw,31px)/1.5 Italiana;margin:8px 0 30px 3vw}.phrase strong{color:var(--brown);font-weight:400}
-.btn{display:inline-flex;align-items:center;gap:14px;min-height:45px;padding:12px 20px;border-radius:999px;background:var(--pink);color:white;font-size:10px;font-weight:600}.btn.out{background:transparent;color:var(--brown);border:1px solid var(--pink)}
-.hero .btn{margin-left:6vw}.hero-img{overflow:hidden;position:relative}.hero-img img{height:100%;object-fit:cover;filter:saturate(.62) sepia(.08)}.label{position:absolute;right:25px;bottom:25px;background:white;color:var(--brown);padding:10px 15px;border-radius:999px;font-size:9px;letter-spacing:.12em}
-section{scroll-margin-top:30px}.collections{padding:72px 4.5vw 90px}.title-row{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}.title{display:flex;align-items:center;gap:14px}.title span{color:var(--pink);font:25px Italiana}.title h2,.favorite h2{margin:0;font-size:clamp(45px,5vw,72px);line-height:1;letter-spacing:-.05em}.desc{max-width:440px;margin:20px 0 0 39px;color:var(--brown);font-size:12px;line-height:1.6}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.card{border:1px solid #f6d5ce;border-radius:22px;overflow:hidden}.card-img{aspect-ratio:1.08;margin:8px;overflow:hidden;border-radius:16px}.card-img img{height:100%;object-fit:cover;transition:.5s}.card:hover img{transform:scale(1.04)}.info{padding:9px 15px 18px;display:flex;justify-content:space-between;align-items:end}.info h3{margin:0 0 4px;font-size:26px}.info p{margin:0;color:var(--brown);font-size:9px}
-.about{padding:55px 5vw 105px;display:grid;grid-template-columns:42% 58%;align-items:center;gap:5vw}.about p{max-width:500px;font-size:13px;line-height:1.7}.highlight{color:var(--brown);font-weight:600}.about-img{height:490px;padding:7px;border:2px solid var(--pink);border-radius:28px}.about-img img{height:100%;object-fit:cover;border-radius:20px;filter:saturate(.65) sepia(.08)}
-.favorite{margin:0 4.5vw 85px;min-height:430px;display:grid;grid-template-columns:48% 52%;overflow:hidden;border-radius:28px;background:#fbd8d1}.favorite-img{min-height:430px}.favorite-img img{height:100%;object-fit:cover;filter:saturate(.72)}.favorite-copy{padding:7vw;display:flex;flex-direction:column;justify-content:center}.favorite-copy p:not(.eyebrow){max-width:430px;font-size:13px;line-height:1.7}
-.benefits{margin:0 2.5vw 22px;padding:30px;display:grid;grid-template-columns:repeat(4,1fr) 1.4fr;gap:15px;border-radius:26px;background:#fbe1dc}.benefit{text-align:center}.benefit .sym{display:block;color:var(--brown);font:37px Italiana;margin-bottom:10px}.benefit p{font-size:10px;line-height:1.5}.igbox{padding:23px;border-radius:22px;background:#f8bdb2;text-align:center;font-size:10px}.igbox a{display:inline-block;background:white;color:var(--brown);padding:8px 13px;border-radius:999px}
-footer{padding:30px 4.5vw;display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;color:var(--brown);font-size:9px;align-items:center}.footer-brand{font:25px Italiana}.foot-center{text-align:center}.foot-right{text-align:right}.copy{text-align:center;grid-column:1/-1;color:var(--pink)}
-.product{display:none;padding:55px 4.5vw}.product.active{display:block}.back{color:var(--brown);font-size:10px}.product-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:6vw;margin-top:35px}.main-photo{aspect-ratio:.94;border-radius:26px;overflow:hidden}.main-photo img{height:100%;object-fit:cover}.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}.thumbs button{padding:4px;border:1px solid transparent;background:white;border-radius:15px}.thumbs button.sel{border-color:var(--pink)}.thumbs img{aspect-ratio:1;object-fit:cover;border-radius:10px}.product h2{font-size:clamp(62px,6.6vw,105px);margin:20px 0}.intro{color:var(--brown);font:clamp(21px,2vw,28px)/1.45 Italiana}.product-copy p{font-size:13px;line-height:1.75}.specs{border-top:1px solid #f4c7bf;margin:30px 0}.spec{padding:15px 0;border-bottom:1px solid #f4c7bf;display:grid;grid-template-columns:115px 1fr;gap:20px;font-size:11px}.spec b{color:var(--brown);font-size:9px;letter-spacing:.12em;text-transform:uppercase}.reviews{margin:70px 0 0;padding:70px 4.5vw;background:var(--soft)}.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.review{padding:28px;min-height:220px;border:1px solid #f4d2cb;border-radius:20px;background:white}.stars{color:var(--brown)}.review p{font:18px/1.55 Italiana!important}.close{margin-top:35px}
-@media(max-width:850px){body{padding:7px}header{grid-template-columns:1fr auto;height:75px}.ig{display:none}nav{display:none}.hero,.about,.favorite,.product-grid{grid-template-columns:1fr}.hero{min-height:auto}.hero-copy{padding:65px 8vw}.hero-img{height:390px}.grid{grid-template-columns:1fr 1fr}.benefits{grid-template-columns:1fr 1fr}.igbox{grid-column:1/-1}.about-img{height:380px}.favorite-img{min-height:320px}.title-row{align-items:flex-start;flex-direction:column}.footer{grid-template-columns:1fr}.review-grid{grid-template-columns:1fr}}
-@media(max-width:540px){.grid{grid-template-columns:1fr}.benefits{grid-template-columns:1fr}.favorite{margin-left:2vw;margin-right:2vw}.product{padding:35px 5vw}.product h2{font-size:65px}}
+:root{--pink:#faa596;--pink-soft:#fdebe7;--brown:#a67153;--white:#fffdfc;--black:#171313;--soft:#fff1ee;--star:#FFC107;--dashed-border:#f4c7bf}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+
+body{margin:0;padding:14px;background:#fff;color:var(--black);font-family:"DM Sans",sans-serif;font-size:20px}
+a{text-decoration:none;color:inherit}img{display:block;width:100%}
+
+.badge-tag{display:inline-flex;align-items:center;gap:6px;padding:6px 16px;border-radius:999px;background:var(--pink-soft);color:var(--brown);font-size:14px;font-weight:600;letter-spacing:.05em;border:1px dashed var(--pink)}
+
+.img-placeholder{width:100%;height:100%;min-height:220px;background:linear-gradient(135deg, #fff1ee 0%, #fbe1dc 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--brown);border:2px dashed #f4c7bf;border-radius:16px;text-align:center;padding:20px;gap:8px}
+.img-placeholder span.icon{font-size:36px}
+.img-placeholder span.text{font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;opacity:0.85}
+
+/* OVERLAYS DE LOGIN E TOUR */
+.login-overlay,.tour-overlay{position:fixed;inset:0;background:rgba(23,19,19,0.5);backdrop-filter:blur(8px);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;overflow-y:auto}
+.login-box,.tour-box{background:var(--white);width:100%;max-width:520px;padding:40px 32px;border-radius:28px;border:2px dashed var(--dashed-border);box-shadow:0 20px 40px rgba(0,0,0,0.12);text-align:center;margin:auto}
+.login-box h2,.tour-box h2{font-family:Italiana,serif;font-size:42px;color:var(--brown);margin:10px 0}
+.login-box p,.tour-box p{font-size:17px;color:var(--brown);margin:0 0 20px;line-height:1.5}
+
+.section{display:none}
+.section.active{display:block;animation:fadeIn 0.4s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+.login-form{display:flex;flex-direction:column;gap:14px;text-align:left}
+.login-form label{font-size:13px;font-weight:600;color:var(--brown);letter-spacing:.1em;text-transform:uppercase}
+.login-form input,.login-form select{width:100%;padding:14px 18px;border-radius:12px;border:1px solid #f6d5ce;background:var(--soft);outline:none;font-family:inherit;font-size:16px;color:var(--brown)}
+.login-form input:focus,.login-form select:focus{border-color:var(--pink)}
+
+.btn-submit{width:100%;justify-content:center;margin-top:10px;cursor:pointer;border:none;font-size:18px;padding:16px;background:var(--pink);color:white;border-radius:999px;font-weight:bold;transition:background 0.3s;box-shadow:0 6px 16px rgba(250,165,150,0.35)}
+.btn-submit:hover{background:#e89384}
+.btn-secondary{width:100%;justify-content:center;margin-top:5px;cursor:pointer;font-size:16px;padding:14px;background:transparent;color:var(--brown);border:2px solid var(--pink);border-radius:999px;font-weight:bold;transition:all 0.3s}
+.btn-secondary:hover{background:var(--soft)}
+.btn-link{background:none;border:none;color:var(--brown);font-size:15px;cursor:pointer;text-decoration:underline;margin-top:15px;font-family:inherit;display:inline-block}
+
+/* GUIA INTERATIVO (TOUR) */
+.tour-steps-indicator{display:flex;justify-content:center;gap:8px;margin:20px 0 10px}
+.tour-dot{width:10px;height:10px;border-radius:50%;background:#e8c0b8;transition:all 0.3s}
+.tour-dot.active{background:var(--pink);width:24px;border-radius:12px}
+
+.tour-nav-btns{display:flex;gap:12px;margin-top:20px}
+.tour-nav-btns button{flex:1;padding:14px;border-radius:999px;font-weight:bold;cursor:pointer;font-size:16px;border:none}
+.btn-tour-next{background:var(--pink);color:white}
+.btn-tour-prev{background:var(--soft);color:var(--brown);border:1px solid var(--dashed-border)!important}
+
+.social-icons{margin-top:20px;text-align:center}
+.social-icons p{margin-bottom:8px;font-size:15px;color:var(--brown)}
+.instagram-icon{width:38px;height:38px;fill:var(--brown);cursor:pointer;transition:transform 0.2s}
+.instagram-icon:hover{transform:scale(1.1);fill:var(--pink)}
+
+.question{text-align:left;margin-bottom:18px}
+.question p{font-weight:bold;margin-bottom:8px;color:var(--brown);font-size:15px}
+
+.shell{max-width:1500px;margin:auto;border:1px solid #f6d5ce;border-radius:28px;overflow:hidden;background:var(--white);display:none;position:relative}
+.shell.logged-in{display:block}
+
+header{height:110px;padding:0 4vw;display:grid;grid-template-columns:220px 1fr 220px;align-items:center;gap:25px;border-bottom:1px dashed var(--dashed-border)}
+.brand{display:flex;flex-direction:column;align-items:center;color:var(--brown);font:48px/0.75 Italiana}.brand small{margin-top:12px;font:600 12px DM Sans;letter-spacing:.42em}
+nav{display:flex;justify-content:center;gap:clamp(20px,4vw,60px)}nav a{font-size:18px;padding:10px 0;position:relative}nav a:after{content:"";position:absolute;left:50%;right:50%;bottom:0;height:2px;background:var(--pink);transition:.2s}nav a:hover:after{left:0;right:0}
+.ig{justify-self:end;padding:14px 22px;border-radius:999px;background:var(--pink);color:white;font-size:15px;font-weight:600;box-shadow:0 4px 12px rgba(250,165,150,0.3)}
+
+.hero{min-height:650px;display:grid;grid-template-columns:48% 52%;background:var(--soft);position:relative}.hero-copy{padding:70px 5.5vw 70px 8vw;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.eyebrow{margin:0 0 20px;color:var(--brown);font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+h1,h2,h3{font-family:Italiana,serif;font-weight:400}
+h1{margin:0 0 26px;color:var(--brown);font-size:clamp(90px,10vw,160px);line-height:.7;letter-spacing:-.065em;text-align:center}
+h1 small{display:block;margin-top:30px;font:500 20px DM Sans;letter-spacing:.55em}
+.phrase{font:italic clamp(24px,3vw,38px)/1.5 Italiana;margin:8px 0 40px 3vw}.phrase strong{color:var(--brown);font-weight:400}
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:55px;padding:16px 28px;border-radius:999px;background:var(--pink);color:white;font-size:16px;font-weight:600;cursor:pointer;transition:transform .2s, background .2s;box-shadow:0 6px 16px rgba(250,165,150,0.3)}
+.btn:hover{transform:translateY(-2px);background:#e89384}
+.btn.out{background:transparent;color:var(--brown);border:2px solid var(--pink);box-shadow:none}
+.btn.out:hover{background:var(--pink-soft)}
+.hero .btn{margin-left:6vw}.hero-img{overflow:hidden;position:relative;background:#fbe1dc;min-height:400px;border-radius:0}.hero-img img{height:100%;object-fit:cover;filter:saturate(.85)}.label{position:absolute;right:35px;bottom:35px;background:white;color:var(--brown);padding:14px 22px;border-radius:999px;font-size:14px;letter-spacing:.12em;box-shadow:0 4px 12px rgba(0,0,0,0.06);border:1px dashed var(--dashed-border)}
+
+.how-it-works{padding:60px 4.5vw;background:var(--white);text-align:center;border-bottom:1px dashed var(--dashed-border)}
+.how-it-works .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:40px}
+.step-card{padding:35px 25px;border-radius:24px;background:var(--soft);border:2px dashed var(--dashed-border);text-align:center}
+.step-card .step-icon{font-size:42px;margin-bottom:15px;display:inline-block}
+.step-card h3{font-size:28px;color:var(--brown);margin:0 0 10px}
+.step-card p{font-size:16px;color:#666;margin:0;line-height:1.5}
+
+section{scroll-margin-top:30px}.collections{padding:80px 4.5vw 50px}.title-row{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:50px}.title{display:flex;align-items:center;gap:14px}.title span{color:var(--pink);font:35px Italiana}.title h2,.favorite h2{margin:0;font-size:clamp(55px,6vw,90px);line-height:1;letter-spacing:-.05em}.desc{max-width:550px;margin:20px 0 0 39px;color:var(--brown);font-size:20px;line-height:1.6}
+
+/* Carrosséis */
+.carousel-wrapper{overflow:hidden;width:100%;position:relative;cursor:grab}
+.carousel-wrapper:active{cursor:grabbing}
+.grid-scroll{display:flex;gap:30px;overflow-x:auto;scroll-behavior:auto;padding-bottom:15px;scrollbar-width:none}
+.grid-scroll::-webkit-scrollbar{display:none}
+.card{min-width:380px;max-width:380px;flex-shrink:0;border:1px solid #f6d5ce;border-radius:24px;overflow:hidden;background:white;cursor:pointer;transition:transform .3s, box-shadow .3s}
+.card:hover{transform:translateY(-5px);box-shadow:0 12px 24px rgba(246,213,206,0.5)}
+.card-img{aspect-ratio:1.08;margin:10px;overflow:hidden;border-radius:18px}.card-img img{height:100%;object-fit:cover;transition:.5s}.card:hover img{transform:scale(1.05)}.info{padding:20px 20px 28px;display:flex;justify-content:space-between;align-items:end}.info h3{margin:0 0 6px;font-size:32px}.info p{margin:0;color:var(--brown);font-size:16px}
+
+.best-sellers{padding:30px 4.5vw 100px;background:var(--white)}
+
+.about{padding:70px 5vw 120px;display:grid;grid-template-columns:52% 48%;align-items:center;gap:5vw}.about p{font-size:20px;line-height:1.75;margin-bottom:16px;color:#333}.highlight{color:var(--brown);font-weight:600;font-size:24px!important;margin-top:20px}.about-img{height:580px;padding:10px;border:2px dashed var(--pink);border-radius:28px;background:var(--soft)}.about-img img{height:100%;object-fit:cover;border-radius:20px}
+.favorite{margin:0 4.5vw 100px;min-height:500px;display:grid;grid-template-columns:48% 52%;overflow:hidden;border-radius:28px;background:#fbd8d1;border:2px dashed var(--pink)}.favorite-img{min-height:500px;padding:0}.favorite-img img{height:100%;object-fit:cover}.favorite-copy{padding:7vw;display:flex;flex-direction:column;justify-content:center}.favorite-copy p:not(.eyebrow){max-width:500px;font-size:22px;line-height:1.7}
+.benefits{margin:0 2.5vw 30px;padding:40px;display:grid;grid-template-columns:repeat(4,1fr) 1.4fr;gap:20px;border-radius:26px;background:#fbe1dc;border:2px dashed var(--dashed-border)}.benefit{text-align:center}.benefit .sym{display:block;color:var(--brown);font:50px Italiana;margin-bottom:15px}.benefit p{font-size:16px;line-height:1.5}.igbox{padding:30px;border-radius:22px;background:#f8bdb2;text-align:center;font-size:16px}.igbox a{display:inline-block;background:white;color:var(--brown);padding:12px 20px;border-radius:999px;margin-top:10px;font-weight:bold}
+footer{padding:40px 4.5vw;display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;color:var(--brown);font-size:14px;align-items:center;border-top:1px dashed var(--dashed-border)}.footer-brand{font:35px Italiana}.foot-center{text-align:center}.foot-right{text-align:right}.copy{text-align:center;grid-column:1/-1;color:var(--pink);margin-top:20px}
+
+/* Página de Produto (Detalhes da Vitrine) */
+.product{display:none;padding:70px 4.5vw}.product.active{display:block}.back{color:var(--brown);font-size:16px;font-weight:bold;display:inline-flex;align-items:center;gap:8px}.product-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:6vw;margin-top:45px}.main-photo{aspect-ratio:.94;border-radius:26px;overflow:hidden}.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:20px}.thumbs button{padding:6px;border:2px dashed transparent;background:white;border-radius:18px;cursor:pointer}.thumbs button.sel{border-color:var(--pink)}.product h2{font-size:clamp(75px,7.5vw,120px);margin:25px 0}.intro{color:var(--brown);font:clamp(28px,2.5vw,36px)/1.45 Italiana}.product-copy p{font-size:22px;line-height:1.75}.specs{border-top:1px dashed #f4c7bf;margin:40px 0}.spec{padding:20px 0;border-bottom:1px dashed #f4c7bf;display:grid;grid-template-columns:160px 1fr;gap:20px;font-size:18px}.spec b{color:var(--brown);font-size:14px;letter-spacing:.12em;text-transform:uppercase}
+
+.action-buttons{display:flex;flex-wrap:wrap;gap:15px;margin-top:30px}
+
+/* Avaliações dentro do Produto */
+.reviews{margin:80px 0 0;padding:60px 0;border-top:1px dashed #f6d5ce}.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.review{padding:35px;min-height:250px;border:2px dashed #f4d2cb;border-radius:24px;background:white}.stars{color:var(--star);font-size:28px;margin-bottom:15px}.review p{font:24px/1.55 Italiana!important;margin-bottom:20px}.close{margin-top:45px}
+
+/* Botão Flutuante do WhatsApp */
+.btn-wpp {position:fixed;bottom:35px;right:35px;width:75px;height:75px;background-color:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(37,211,102,0.35);z-index:9000;transition:transform .3s;cursor:pointer}
+.btn-wpp:hover {transform:scale(1.1)}
+.btn-wpp svg {width:45px;height:45px;fill:#fff}
+
+@media(max-width:850px){body{padding:7px}header{grid-template-columns:1fr auto;height:85px}.ig{display:none}nav{display:none}.hero,.about,.favorite,.product-grid{grid-template-columns:1fr}.hero{min-height:auto}.hero-copy{padding:65px 8vw}.hero-img{height:390px}.benefits{grid-template-columns:1fr 1fr}.igbox{grid-column:1/-1}.about-img{height:380px}.favorite-img{min-height:320px}.title-row{align-items:flex-start;flex-direction:column}.footer{grid-template-columns:1fr}.review-grid,.how-it-works .steps-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<main class="shell">
+
+<!-- MODAL COM LOGIN, CADASTRO COMPLETO E PREFERÊNCIAS -->
+<div class="login-overlay" id="loginModal">
+  <div class="login-box">
+    
+    <!-- 1. TELA DE LOGIN -->
+    <div id="login-section" class="section active">
+      <span class="badge-tag">🌸 Vitrine Exclusiva</span>
+      <h2 style="margin-top:10px;">Diana Crochê</h2>
+      <p>Acesse sua conta para conhecer nossas peças</p>
+      
+      <form class="login-form" onsubmit="realizarLogin(event)">
+        <div>
+          <label>E-mail ou Usuário</label>
+          <input type="text" id="email-login" required placeholder="Digite seu e-mail">
+        </div>
+        <div>
+          <label>Senha</label>
+          <input type="password" id="senha-login" required placeholder="••••••••">
+        </div>
+        <button type="submit" class="btn-submit">Entrar na Vitrine →</button>
+      </form>
+      
+      <p style="margin-top:20px; margin-bottom:10px; font-size:16px;">Ainda não tem uma conta?</p>
+      <button class="btn-secondary" onclick="switchSection('register-section')">Cadastrar nova conta</button>
+      
+      <div class="social-icons">
+        <p>Acompanhe nosso trabalho:</p>
+        <svg class="instagram-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 2. TELA DE CADASTRO -->
+    <div id="register-section" class="section">
+      <h2>Criar Conta</h2>
+      <p>Preencha os dados abaixo para se cadastrar</p>
+      
+      <form class="login-form" onsubmit="irParaQuiz(event)">
+        <div>
+          <label>E-mail</label>
+          <input type="email" id="reg-email" required placeholder="seuemail@exemplo.com">
+        </div>
+        <div>
+          <label>Idade</label>
+          <input type="number" id="reg-idade" required placeholder="Ex: 25">
+        </div>
+        <div>
+          <label>CPF</label>
+          <input type="text" id="reg-cpf" required placeholder="000.000.000-00">
+        </div>
+        <div>
+          <label>Número de Telefone</label>
+          <input type="tel" id="reg-telefone" required placeholder="(61) 99999-9999">
+        </div>
+        <div>
+          <label>Crie sua Senha</label>
+          <input type="password" id="reg-senha" required placeholder="••••••••">
+        </div>
+        <button type="submit" class="btn-submit">Continuar para o Perfil →</button>
+      </form>
+      
+      <button class="btn-link" onclick="switchSection('login-section')">Já possui conta? Fazer login.</button>
+    </div>
+
+    <!-- 3. TELA DE QUIZ (PREFERÊNCIAS) -->
+    <div id="quiz-section" class="section">
+      <h2>Suas Preferências</h2>
+      <p>Responda rápido para personalizar sua experiência!</p>
+      
+      <form class="login-form" onsubmit="finalizarCadastroEEntrar(event)">
+        <div class="question">
+          <p>1. Que modelo/estilo visual você mais prefere?</p>
+          <select required>
+            <option value="" disabled selected>Selecione uma opção...</option>
+            <option value="artistico">Artístico / Pintura & Artesanato</option>
+            <option value="anime">Anime / Mangá & Geek</option>
+            <option value="games">Games / Jogos</option>
+            <option value="realista">Fotografia Realista & Natural</option>
+            <option value="minimalista">Minimalista & Elegante</option>
+          </select>
+        </div>
+        
+        <div class="question">
+          <p>2. Qual tipo de crochê desperta mais seu interesse?</p>
+          <select required>
+            <option value="" disabled selected>Selecione uma opção...</option>
+            <option value="bolsas">Bolsas e Acessórios</option>
+            <option value="amigurumi">Amigurumis e Bichinhos Fofos</option>
+            <option value="decoracao">Decoração de Interiores (Tapetes e Almofadas)</option>
+            <option value="mesa">Mesa Posta (Sousplats e Toalhas)</option>
+            <option value="vestuario">Vestuário (Tops e Cardigans)</option>
+          </select>
+        </div>
+        
+        <button type="submit" class="btn-submit">Concluir e Entrar na Vitrine ✨</button>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<!-- MODAL DE BEM-VINDO E GUIA INTERATIVO (TOUR) -->
+<div class="tour-overlay" id="tourModal" style="display:none;">
+  <div class="tour-box">
+    <span class="badge-tag" id="tourBadge">🎉 Boas-vindas!</span>
+    <h2 id="tourTitle">Bem-vindo(a) à nossa Vitrine! 👋</h2>
+    <p id="tourDesc">Sua experiência personalizada começou! Nossa vitrine foi desenvolvida com muito carinho para você explorar nossas peças artesanais exclusivas em crochê.</p>
+    
+    <div style="background:var(--soft); padding:15px; border-radius:16px; border:1px dashed var(--dashed-border); margin:15px 0; font-size:15px; color:var(--brown);" id="tourHighlight">
+      💡 Sinta-se em casa e aproveite a navegação pelo nosso ateliê!
+    </div>
+
+    <div class="tour-steps-indicator" id="tourDots">
+      <span class="tour-dot active"></span>
+      <span class="tour-dot"></span>
+      <span class="tour-dot"></span>
+      <span class="tour-dot"></span>
+    </div>
+
+    <div class="tour-nav-btns">
+      <button class="btn-tour-prev" id="btnTourPrev" onclick="mudarPassoTour(-1)" style="visibility:hidden;">Anterior</button>
+      <button class="btn-tour-next" id="btnTourNext" onclick="mudarPassoTour(1)">Próximo →</button>
+    </div>
+    
+    <button class="btn-link" onclick="fecharTour()" style="margin-top:12px;">Pular Guia e Explorar a Vitrine</button>
+  </div>
+</div>
+
+<!-- ESTRUTURA PRINCIPAL DO SITE -->
+<main class="shell" id="siteShell">
 <header>
 <a class="brand" href="#inicio">Diana<small>CROCHÊ</small></a>
-<nav><a href="#inicio">Início</a><a href="#sobre">Sobre nós</a><a href="#colecoes">Coleções</a><a href="#bastidores">Bastidores</a><a href="#contato">Contato</a></nav>
-<a class="ig" href="https://www.instagram.com/ale_.britz/" target="_blank">◎ Loja no Instagram</a>
+<nav><a href="#inicio">Início</a><a href="#como-funciona">Como Pedir</a><a href="#colecoes">Coleções</a><a href="#mais-vendidos">Mais Vendidos</a><a href="#sobre">Sobre nós</a></nav>
+<a class="ig" href="#" onclick="return false;">◎ Instagram</a>
 </header>
 
+<!-- TELA INICIAL (VITRINE DA LOJA) -->
 <div id="home">
 <section class="hero" id="inicio">
-<div class="hero-copy"><p class="eyebrow">Crochê feito com tempo e carinho</p><h1>Diana<small>CROCHÊ</small></h1><p class="phrase">Feito à mão, feito com amor,<br><strong>feito para você.</strong></p><a class="btn" href="#colecoes">Conheça nossas coleções →</a></div>
-<div class="hero-img"><img src="https://images.unsplash.com/photo-1686285961015-12886f9b3bf5?auto=format&fit=crop&w=1500&q=92"><span class="label">feito ponto por ponto</span></div>
+<div class="hero-copy">
+  <span class="badge-tag">🧶 Feito à mão com afeto</span>
+  <h1>Diana<small>CROCHÊ</small></h1>
+  <p class="phrase">Feito à mão, feito com amor,<br><strong>feito para você.</strong></p>
+  <a class="btn" href="#colecoes">Explorar Vitrine →</a>
+</div>
+<div class="hero-img">
+  <img src="https://i.postimg.cc/rwXmCtwD/Whats-App-Image-2026-10-06-at-14-15-17-(2).jpg" alt="Destaque Principal Diana Crochê">
+  <span class="label">ponto por ponto ♡</span>
+</div>
 </section>
 
+<!-- SEÇÃO EXPLICATIVA: COMO FUNCIONA A VITRINE -->
+<section class="how-it-works" id="como-funciona">
+  <span class="badge-tag">✨ Atendimento Sob Medida</span>
+  <h2 style="font-size:clamp(40px,4.5vw,65px); color:var(--brown); margin:15px 0 10px;">Como encomendar na nossa Vitrine</h2>
+  <p style="color:var(--brown); max-width:650px; margin:auto; font-size:18px;">Não fazemos vendas automáticas. Cada peça é conversada e produzida com carinho diretamente com você!</p>
+  
+  <div class="steps-grid">
+    <div class="step-card">
+      <span class="step-icon">🌸</span>
+      <h3>1. Escolha a Peça</h3>
+      <p>Navegue pela vitrine e clique na peça que encantou seu coração.</p>
+    </div>
+    <div class="step-card">
+      <span class="step-icon">💬</span>
+      <h3>2. Fale Conosco</h3>
+      <p>Clique no botão para nos chamar no WhatsApp ou no Instagram.</p>
+    </div>
+    <div class="step-card">
+      <span class="step-icon">✨</span>
+      <h3>3. Personalizamos</h3>
+      <p>Definimos juntos as cores, tamanhos e prazos do seu pedido artesanal.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COLEÇÕES COM SUAS FOTOS REAIS HOSPEDADAS -->
 <section class="collections" id="colecoes">
-<div class="title-row"><div><div class="title"><span>✧</span><h2>Coleções</h2><span>♡</span></div><p class="desc">Peças para vestir, decorar, presentear e guardar com carinho.</p></div><a class="btn out" href="#favoritos">Ver todas as peças →</a></div>
-<div class="grid">
-<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1686285961015-12886f9b3bf5?auto=format&fit=crop&w=800&q=88"></div><div class="info"><div><h3>Bolsas de crochê</h3><p>Para levar afeto</p></div>→</div></div>
-<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1753370241607-5d48d8aaa70e?auto=format&fit=crop&w=800&q=88"></div><div class="info"><div><h3>Amigurumis</h3><p>Companheiros feitos à mão</p></div>→</div></div>
-<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1502245610427-c7abdffde91b?auto=format&fit=crop&w=800&q=88"></div><div class="info"><div><h3>Mesa posta</h3><p>Sousplats e detalhes especiais</p></div>→</div></div>
-<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1753879118115-8f25ef6af5b8?auto=format&fit=crop&w=800&q=88"></div><div class="info"><div><h3>Tapetes</h3><p>Textura para todos os cantos</p></div>→</div></div>
-<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1575414003591-ece8d0416c7a?auto=format&fit=crop&w=800&q=88"></div><div class="info"><div><h3>Decoração</h3><p>Casa bonita e acolhedora</p></div>→</div></div>
-<div class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1662459342443-1fb56cdc6473?auto=format&fit=crop&w=800&q=88"></div><div class="info"><div><h3>Roupas e acessórios</h3><p>Crochê para vestir e sentir</p></div>→</div></div>
+<div class="title-row"><div><div class="title"><span>✧</span><h2>Coleções</h2><span>♡</span></div><p class="desc">Peças para vestir, decorar, presentear e guardar com carinho.</p></div></div>
+<div class="carousel-wrapper">
+  <div class="grid-scroll" id="cardGrid1">
+    
+    <div class="card"><div class="card-img"><img src="https://i.postimg.cc/rwXmCtwD/Whats-App-Image-2026-10-06-at-14-15-17-(2).jpg" alt="Bolsas"></div><div class="info"><div><h3>Bolsas</h3><p>Para levar afeto</p></div></div></div>
+    
+    <div class="card"><div class="card-img"><img src="https://i.postimg.cc/vHqRbJCJ/Whats-App-Image-2026-10-06-at-14-15-17-(1).jpg" alt="Amigurumis"></div><div class="info"><div><h3>Amigurumis</h3><p>Companheiros à mão</p></div></div></div>
+    
+    <div class="card"><div class="card-img"><img src="https://i.postimg.cc/76ydKwTN/Whats-App-Image-2026-10-06-at-14-15-17.jpg" alt="Mesa Posta"></div><div class="info"><div><h3>Mesa posta</h3><p>Sousplats e detalhes</p></div></div></div>
+    
+    <div class="card"><div class="card-img"><img src="https://i.postimg.cc/jdk1Gz75/Whats-App-Image-2026-10-06-at-14-15-18-(1).jpg" alt="Tapetes e Mantas"></div><div class="info"><div><h3>Tapetes e Mantas</h3><p>Textura para os cantos</p></div></div></div>
+    
+    <div class="card"><div class="card-img"><img src="https://i.postimg.cc/25N0DT85/Whats-App-Image-2026-10-06-at-14-15-18.jpg" alt="Acessórios"></div><div class="info"><div><h3>Acessórios</h3><p>Crochê para vestir</p></div></div></div>
+
+  </div>
 </div>
 </section>
 
-<section class="about" id="sobre"><div><div class="title"><h2>Sobre a Diana Crochê</h2><span>♡</span></div><p>A Diana Crochê nasceu de uma inspiração muito especial: a relação entre mãe e filha. Diana é a mãe que dá nome e significado a este projeto — uma presença que representa carinho, dedicação e afeto.</p><p>A ideia de criar a loja partiu de sua filha, que encontrou no crochê uma forma de transformar criatividade e cuidado em peças únicas, feitas à mão e cheias de história.</p><p class="highlight">Mais que uma loja, uma história de afeto.</p><a class="btn" href="#bastidores">Nossa história completa →</a></div><div class="about-img" id="bastidores"><img src="https://images.unsplash.com/photo-1608643761787-4e8e132a7c8c?auto=format&fit=crop&w=1200&q=88"></div></section>
+<!-- MAIS VENDIDOS -->
+<section class="best-sellers" id="mais-vendidos">
+<div class="title-row"><div><div class="title"><span>✧</span><h2>Mais Vendidos</h2><span>♡</span></div><p class="desc">As peças mais amadas e procuradas no nosso ateliê.</p></div></div>
+<div class="carousel-wrapper">
+  <div class="grid-scroll" id="cardGrid2">
+    <div class="card" onclick="showProduct('amigurumi-urso')">
+      <div class="card-img"><img src="https://i.postimg.cc/vHqRbJCJ/Whats-App-Image-2026-10-06-at-14-15-17-(1).jpg" alt="Amigurumi Gatinho"></div>
+      <div class="info"><div><h3>Amigurumi Gatinho</h3><p>Companheiro fofo</p></div>→</div>
+    </div>
+    <div class="card" onclick="showProduct('top-verao')">
+      <div class="card-img"><img src="https://i.postimg.cc/25N0DT85/Whats-App-Image-2026-10-06-at-14-15-18.jpg" alt="Chaveiro Sol e Lua"></div>
+      <div class="info"><div><h3>Acessórios Sol e Lua</h3><p>Estilo em crochê</p></div>→</div>
+    </div>
+    <div class="card" onclick="showProduct('cardigan-inverno')">
+      <div class="card-img"><img src="https://i.postimg.cc/rwXmCtwD/Whats-App-Image-2026-10-06-at-14-15-17-(2).jpg" alt="Bolsa Marrom"></div>
+      <div class="info"><div><h3>Bolsa Marrom</h3><p>Elegância artesanal</p></div>→</div>
+    </div>
+    <div class="card" onclick="showProduct('almofada-boho')">
+      <div class="card-img"><img src="https://i.postimg.cc/76ydKwTN/Whats-App-Image-2026-10-06-at-14-15-17.jpg" alt="Toalhinha Trabalhada"></div>
+      <div class="info"><div><h3>Toalhinha Trabalhada</h3><p>Decoração com textura</p></div>→</div>
+    </div>
+    <div class="card" onclick="showProduct('cesto-decor')">
+      <div class="card-img"><img src="https://i.postimg.cc/jdk1Gz75/Whats-App-Image-2026-10-06-at-14-15-18-(1).jpg" alt="Kit Mesa Flor"></div>
+      <div class="info"><div><h3>Kit Mesa Flor</h3><p>Delicadeza para a mesa</p></div>→</div>
+    </div>
+  </div>
+</div>
+</section>
 
-<section class="favorite" id="favoritos"><a class="favorite-img" href="#" onclick="showProduct();return false"><img src="https://images.unsplash.com/photo-1638427291164-b4adea2f7b96?auto=format&fit=crop&w=1100&q=88"></a><div class="favorite-copy"><p class="eyebrow">Favorito da estação</p><h2>Bolsa Jardim</h2><p>Flores feitas uma a uma transformam esta bolsa em um pequeno jardim para carregar todos os dias.</p><a class="btn" href="#" onclick="showProduct();return false">Ver detalhes →</a></div></section>
+<!-- SEÇÃO SOBRE NÓS ATUALIZADA -->
+<section class="about" id="sobre">
+  <div>
+    <span class="badge-tag">♡ Nossa História</span>
+    <div class="title" style="margin-top:10px;"><h2>Sobre a Diana Crochê</h2><span>♡</span></div>
+    
+    <p>A Diana Crochê nasceu do encontro entre duas formas de enxergar o artesanato.</p>
+    
+    <p>De um lado, a tradição de uma mãe que encontrou no crochê uma forma de criar, cuidar e transformar fios em peças feitas com experiência e dedicação. Do outro, a visão de uma filha que cresceu cercada por esse trabalho e trouxe consigo novas referências, estilos e possibilidades.</p>
+    
+    <p>Aqui, o crochê não precisa seguir um único caminho. Ele pode estar em um simples tapete, em uma peça delicada para a casa, em um acessório cheio de personalidade ou em uma criação inspirada na moda, na cultura pop e em estilos alternativos.</p>
+    
+    <p>Cada uma traz seu próprio olhar, mas é justamente na mistura entre o tradicional e o contemporâneo que encontramos a identidade da marca.</p>
+    
+    <p>Mais do que criar peças de crochê, queremos transformar aquilo que aprendemos e aquilo que descobrimos juntas em algo que também possa fazer parte da história de outras pessoas.</p>
+    
+    <p class="highlight">Duas gerações, dois olhares e um mesmo fio.</p>
+  </div>
+  <div class="about-img" id="bastidores">
+    <img src="https://i.postimg.cc/vHqRbJCJ/Whats-App-Image-2026-10-06-at-14-15-17-(1).jpg" alt="Duas Gerações Diana Crochê">
+  </div>
+</section>
 
-<section class="benefits"><div class="benefit"><span class="sym">◌</span><p>Peças feitas<br><b>à mão</b></p></div><div class="benefit"><span class="sym">♡</span><p>Produção<br><b>artesanal</b></p></div><div class="benefit"><span class="sym">⌁</span><p>Design autoral<br><b>e exclusivo</b></p></div><div class="benefit"><span class="sym">✿</span><p>Feito com amor<br><b>para você</b></p></div><div class="igbox"><p>Acompanhe novidades,<br>bastidores e lançamentos.</p><a href="https://www.instagram.com/ale_.britz/" target="_blank">@ale_.britz</a></div></section>
+<section class="favorite" id="favoritos">
+  <a class="favorite-img" href="#" onclick="showProduct('bolsa-jardim');return false">
+    <img src="https://i.postimg.cc/rwXmCtwD/Whats-App-Image-2026-10-06-at-14-15-17-(2).jpg" alt="Bolsa em Crochê">
+  </a>
+  <div class="favorite-copy">
+    <p class="eyebrow">Favorito da estação</p>
+    <h2>Bolsa Marrom Artesanal</h2>
+    <p>Com tramas elaboradas e detalhes amadeirados, esta bolsa traduz o afeto e a dedicação do nosso ateliê.</p>
+    <a class="btn" href="#" onclick="showProduct('bolsa-jardim');return false">Ver detalhes na vitrine →</a>
+  </div>
+</section>
+
+<section class="benefits">
+  <div class="benefit"><span class="sym">◌</span><p>Peças feitas<br><b>à mão</b></p></div>
+  <div class="benefit"><span class="sym">♡</span><p>Produção<br><b>artesanal</b></p></div>
+  <div class="benefit"><span class="sym">⌁</span><p>Design autoral<br><b>e exclusivo</b></p></div>
+  <div class="benefit"><span class="sym">✿</span><p>Feito com amor<br><b>para você</b></p></div>
+  <div class="igbox">
+    <p>Acompanhe lançamentos.</p>
+    <a href="#" onclick="return false;">◎ Instagram</a>
+  </div>
+</section>
 </div>
 
+<!-- TELA DINÂMICA DE EXIBIÇÃO DE PRODUTO NA VITRINE -->
 <section class="product" id="product">
-<a class="back" href="#" onclick="showHome();return false">← Voltar para coleções</a>
-<div class="product-grid"><div><div class="main-photo"><img id="mainImg" src="https://images.unsplash.com/photo-1638427291164-b4adea2f7b96?auto=format&fit=crop&w=1400&q=90"></div><div class="thumbs"><button class="sel" onclick="changeImg(this,0)"><img src="https://images.unsplash.com/photo-1638427291164-b4adea2f7b96?auto=format&fit=crop&w=500&q=90"></button><button onclick="changeImg(this,1)"><img src="https://images.unsplash.com/photo-1686285961015-12886f9b3bf5?auto=format&fit=crop&w=500&q=90"></button><button onclick="changeImg(this,2)"><img src="https://images.unsplash.com/photo-1747856056384-ba35f5ed353d?auto=format&fit=crop&w=500&q=90"></button><button onclick="changeImg(this,3)"><img src="https://images.unsplash.com/photo-1700171394718-2457b1190444?auto=format&fit=crop&w=500&q=90"></button></div></div>
-<div class="product-copy"><p class="eyebrow">Favorito da estação</p><h2>Bolsa Jardim</h2><p class="intro">Uma pequena celebração da natureza, criada ponto por ponto para acompanhar histórias, encontros e dias especiais.</p><p>A Bolsa Jardim é uma peça artesanal de crochê que combina textura, delicadeza e personalidade. Suas flores são produzidas individualmente e aplicadas à mão, tornando cada bolsa verdadeiramente única.</p><div class="specs"><div class="spec"><b>Material</b><span>Fio de algodão macio e resistente</span></div><div class="spec"><b>Acabamento</b><span>Flores aplicadas à mão e forro interno</span></div><div class="spec"><b>Características</b><span>Alças confortáveis, peça leve e formato estruturado</span></div><div class="spec"><b>Criação</b><span>Produção artesanal em pequena escala</span></div></div><a class="btn" href="https://www.instagram.com/ale_.britz/" target="_blank">Conversar sobre a peça →</a></div></div>
-</section>
-<section class="reviews" id="reviews"><div class="title-row"><div><p class="eyebrow">Impressões de quem escolheu</p><div class="title"><h2>Feita para encantar</h2></div></div><p class="desc">Avaliações ilustrativas criadas para demonstração deste protótipo.</p></div><div class="review-grid"><article class="review"><div class="stars">★★★★★</div><p>“Os detalhes das flores são ainda mais delicados de perto. A bolsa tem um acabamento lindo e dá para sentir o cuidado em cada ponto.”</p><b>Marina A.</b></article><article class="review"><div class="stars">★★★★★</div><p>“Uma peça muito especial e com personalidade. Ficou perfeita tanto com looks leves quanto em ocasiões mais arrumadas.”</p><b>Clara M.</b></article><article class="review"><div class="stars">★★★★☆</div><p>“A textura é maravilhosa e o tamanho é ótimo para o dia a dia. Gostei muito da combinação das cores e do forro.”</p><b>Beatriz R.</b></article></div><div class="close"><a class="btn out" href="#" onclick="showHome();return false">← Voltar para a loja</a></div></section>
+<a class="back" href="#" onclick="showHome();return false">← Voltar para a vitrine</a>
+<div class="product-grid"><div>
+  <div class="main-photo" id="prod-main-box">
+    <img id="prod-mainImg" src="https://i.postimg.cc/rwXmCtwD/Whats-App-Image-2026-10-06-at-14-15-17-(2).jpg" alt="Foto Principal do Produto">
+  </div>
+  <div class="thumbs" id="prod-thumbs">
+    <button class="sel" onclick="changeImg(this,0)"><img src="https://i.postimg.cc/rwXmCtwD/Whats-App-Image-2026-10-06-at-14-15-17-(2).jpg" alt="Miniatura 1"></button>
+    <button onclick="changeImg(this,1)"><img src="https://i.postimg.cc/vHqRbJCJ/Whats-App-Image-2026-10-06-at-14-15-17-(1).jpg" alt="Miniatura 2"></button>
+    <button onclick="changeImg(this,2)"><img src="https://i.postimg.cc/76ydKwTN/Whats-App-Image-2026-10-06-at-14-15-17.jpg" alt="Miniatura 3"></button>
+    <button onclick="changeImg(this,3)"><img src="https://i.postimg.cc/jdk1Gz75/Whats-App-Image-2026-10-06-at-14-15-18-(1).jpg" alt="Miniatura 4"></button>
+  </div>
+</div>
+<div class="product-copy">
+  <span class="badge-tag" id="prod-eyebrow"></span>
+  <h2 id="prod-title" style="margin:15px 0;"></h2>
+  <p class="intro" id="prod-intro"></p>
+  <p id="prod-desc"></p>
+  <div class="specs">
+    <div class="spec"><b>Material</b><span id="prod-mat"></span></div>
+    <div class="spec"><b>Acabamento</b><span id="prod-aca"></span></div>
+    <div class="spec"><b>Características</b><span id="prod-car"></span></div>
+    <div class="spec"><b>Criação</b><span id="prod-cri"></span></div>
+  </div>
+  
+  <p style="font-size:15px; color:var(--brown); font-weight:600; margin-bottom:10px;">Gostou desta peça? Escolha por onde quer encomendar:</p>
+  
+  <div class="action-buttons">
+    <a class="btn" id="prod-wpp-btn" href="https://wa.me/5561992780368" target="_blank">Encomendar via WhatsApp 💬</a>
+    <a class="btn out" id="prod-ig-btn" href="#" onclick="return false;">Ver no Instagram ◎</a>
+  </div>
+</div></div>
 
-<footer id="contato"><a class="footer-brand" href="#inicio">Diana Crochê</a><p class="foot-center">Peças únicas, feitas com tempo.</p><a class="foot-right" href="mailto:oi@dianacroche.com.br">oi@dianacroche.com.br</a><span class="copy">© 2025 · Todos os direitos reservados</span></footer>
+<!-- AVALIAÇÕES FICAM EXCLUSIVAMENTE AQUI DENTRO DO PRODUTO -->
+<div class="reviews" id="reviews">
+  <div class="title-row">
+    <div>
+      <p class="eyebrow">Impressões de quem escolheu</p>
+      <div class="title"><h2>Feita para encantar</h2></div>
+    </div>
+  </div>
+  <div class="review-grid">
+    <article class="review"><div class="stars">★★★★★</div><p>“Simplesmente maravilhoso! O tecido é de alta qualidade e dá para sentir o cuidado em cada ponto. Super indico!”</p><b>Marina A.</b></article>
+    <article class="review"><div class="stars">★★★★★</div><p>“Uma peça muito especial e com personalidade. Ficou perfeita no ambiente, mudou completamente a energia.”</p><b>Clara M.</b></article>
+    <article class="review"><div class="stars">★★★★☆</div><p>“A textura é muito macia. Gostei bastante da combinação de cores. Superou minhas expectativas, muito capricho.”</p><b>Beatriz R.</b></article>
+  </div>
+  <div class="close"><a class="btn out" href="#" onclick="showHome();return false">← Voltar para a vitrine</a></div>
+</div>
+</section>
+
+<footer id="contato">
+  <a class="footer-brand" href="#inicio">Diana Crochê</a>
+  <p class="foot-center">Vitrine de peças únicas, feitas com tempo e carinho.</p>
+  <a class="foot-right" href="https://wa.me/5561992780368?text=Ol%C3%A1!%20Vim%20pela%20vitrine%20da%20Diana%20Croch%C3%AA." target="_blank">WhatsApp: (61) 99278-0368</a>
+  <span class="copy">© 2026 · Todos os direitos reservados</span>
+</footer>
+
+<!-- BOTÃO FLUTUANTE DO WHATSAPP (ATIVO) -->
+<a class="btn-wpp" href="https://wa.me/5561992780368?text=Ol%C3%A1!%20Vim%20pela%20vitrine%20da%20Diana%20Croch%C3%AA%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida." target="_blank" title="Fale conosco no WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+    <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+  </svg>
+</a>
+
 </main>
+
 <script>
-const imgs=[
-"https://images.unsplash.com/photo-1638427291164-b4adea2f7b96?auto=format&fit=crop&w=1400&q=90",
-"https://images.unsplash.com/photo-1686285961015-12886f9b3bf5?auto=format&fit=crop&w=1400&q=90",
-"https://images.unsplash.com/photo-1747856056384-ba35f5ed353d?auto=format&fit=crop&w=1400&q=90",
-"https://images.unsplash.com/photo-1700171394718-2457b1190444?auto=format&fit=crop&w=1400&q=90"];
-function showProduct(){document.getElementById('home').style.display='none';document.querySelector('.product').classList.add('active');document.getElementById('reviews').style.display='block';window.scrollTo(0,0)}
-function showHome(){document.getElementById('home').style.display='block';document.querySelector('.product').classList.remove('active');document.getElementById('reviews').style.display='none';window.scrollTo(0,0)}
-function changeImg(btn,i){document.getElementById('mainImg').src=imgs[i];document.querySelectorAll('.thumbs button').forEach(b=>b.classList.remove('sel'));btn.classList.add('sel')}
-document.getElementById('reviews').style.display='none';
+// ---------- LÓGICA DAS TELAS DE LOGIN / CADASTRO / QUIZ ----------
+function switchSection(sectionId) {
+  document.querySelectorAll('.section').forEach(section => {
+    section.classList.remove('active');
+  });
+  document.getElementById(sectionId).classList.add('active');
+}
+
+function realizarLogin(e) {
+  e.preventDefault();
+  fecharModalEIniciarSite();
+}
+
+function irParaQuiz(e) {
+  e.preventDefault();
+  switchSection('quiz-section');
+}
+
+function finalizarCadastroEEntrar(e) {
+  e.preventDefault();
+  fecharModalEIniciarSite();
+}
+
+function fecharModalEIniciarSite() {
+  document.getElementById('loginModal').style.display = 'none';
+  document.getElementById('siteShell').classList.add('logged-in');
+  
+  iniciarRolagemInfinita('cardGrid1');
+  iniciarRolagemInfinita('cardGrid2');
+
+  // ABRE O GUIA INTERATIVO DE BOAS-VINDAS AUTOMATICAMENTE
+  abrirTour();
+}
+
+// ---------- LÓGICA DO GUIA INTERATIVO (TOUR) ----------
+const tourSteps = [
+  {
+    badge: "🎉 Boas-vindas!",
+    title: "Bem-vindo(a) à nossa Vitrine! 👋",
+    desc: "Sua experiência personalizada começou! Nossa vitrine foi desenvolvida com muito carinho para você explorar nossas peças artesanais exclusivas em crochê.",
+    highlight: "💡 Sinta-se em casa e aproveite a navegação pelo nosso ateliê!"
+  },
+  {
+    badge: "🧭 Navegação Fácil",
+    title: "Como explorar os produtos",
+    desc: "No menu superior e nos carrosséis de Coleções e Mais Vendidos, você encontra Bolsas, Amigurumis, Tapetes, Mesa Posta e Acessórios.",
+    highlight: "✨ Dica: Você pode arrastar os cards para os lados para ver mais opções de modelos!"
+  },
+  {
+    badge: "🧶 Detalhes da Peça",
+    title: "Saber mais sobre um item",
+    desc: "Gostou de alguma peça? Clique sobre o card dela! A página do produto abrirá com especificações de material, acabamento, fotos e avaliações reais.",
+    highlight: "🌸 Cada peça traz detalhes da criação e do tempo de produção sob encomenda."
+  },
+  {
+    badge: "💬 Atendimento Humanizado",
+    title: "Como encomendar e tirar dúvidas",
+    desc: "Não fazemos compras automáticas e impessoais! Clique no botão flutuante do WhatsApp ou no Instagram para falar direto com a artesã.",
+    highlight: "💬 Definimos juntos as cores, os tamanhos e os detalhes do seu pedido!"
+  }
+];
+
+let passoAtualTour = 0;
+
+function abrirTour() {
+  passoAtualTour = 0;
+  atualizarPassoTour();
+  document.getElementById('tourModal').style.display = 'flex';
+}
+
+function fecharTour() {
+  document.getElementById('tourModal').style.display = 'none';
+}
+
+function mudarPassoTour(direcao) {
+  passoAtualTour += direcao;
+  if (passoAtualTour < 0) passoAtualTour = 0;
+  if (passoAtualTour >= tourSteps.length) {
+    fecharTour();
+    return;
+  }
+  atualizarPassoTour();
+}
+
+function atualizarPassoTour() {
+  const passo = tourSteps[passoAtualTour];
+  document.getElementById('tourBadge').innerText = passo.badge;
+  document.getElementById('tourTitle').innerText = passo.title;
+  document.getElementById('tourDesc').innerText = passo.desc;
+  document.getElementById('tourHighlight').innerText = passo.highlight;
+
+  const dots = document.querySelectorAll('#tourDots .tour-dot');
+  dots.forEach((dot, index) => {
+    if (index === passoAtualTour) {
+      dot.classList.add('active');
+    } else {
+      dot.classList.remove('active');
+    }
+  });
+
+  const btnPrev = document.getElementById('btnTourPrev');
+  const btnNext = document.getElementById('btnTourNext');
+
+  if (passoAtualTour === 0) {
+    btnPrev.style.visibility = 'hidden';
+  } else {
+    btnPrev.style.visibility = 'visible';
+  }
+
+  if (passoAtualTour === tourSteps.length - 1) {
+    btnNext.innerText = "Concluir e Navegar ✨";
+  } else {
+    btnNext.innerText = "Próximo →";
+  }
+}
+
+// ---------- BANCO DE DADOS DOS PRODUTOS DA VITRINE ----------
+const PHONE_NUMBER = "5561992780368";
+
+const produtos = {
+  'bolsa-jardim': {
+    title: 'Bolsa Marrom Artesanal', eyebrow: 'Favorito da Estação',
+    intro: 'Uma peça autoral com trama marcante e alças amadeiradas.',
+    desc: 'Bolsa de crochê com ponto vazado e acabamento de alta qualidade. Traz elegância e personalidade para compor qualquer visual.',
+    mat: 'Fio de algodão / malha de alta gramatura', aca: 'Detalhes em madeira e barbicacho',
+    car: 'Espaçosa, resistente e forrada', cri: 'Feita sob encomenda (7 dias)',
+    imgs: ["https://i.postimg.cc/rwXmCtwD/Whats-App-Image-2026-10-06-at-14-15-17-(2).jpg"]
+  },
+  'amigurumi-urso': {
+    title: 'Amigurumis Gatinhos', eyebrow: 'Mais Vendido',
+    intro: 'Companheiros artesanais fofos e macios.',
+    desc: 'Feitos à mão ponto por ponto, perfeitos para decoração ou presente especial.',
+    mat: 'Fio de algodão super macio', aca: 'Detalhes bordados à mão',
+    car: 'Laváveis e antialérgicos', cri: 'Trabalho minucioso à mão',
+    imgs: ["https://i.postimg.cc/vHqRbJCJ/Whats-App-Image-2026-10-06-at-14-15-17-(1).jpg"]
+  },
+  'top-verao': {
+    title: 'Acessórios Sol e Lua', eyebrow: 'Mais Vendido',
+    intro: 'Chaveiros e mimos artesanais cheios de significado.',
+    desc: 'Pequenas artes em crochê para levar no bolso, bolsa ou presentear quem você ama.',
+    mat: 'Fio de algodão colorido', aca: 'Argolas e bordados artesanais',
+    car: 'Leve, durável e exclusivo', cri: 'Design exclusivo da marca',
+    imgs: ["https://i.postimg.cc/25N0DT85/Whats-App-Image-2026-10-06-at-14-15-18.jpg"]
+  },
+  'cardigan-inverno': {
+    title: 'Bolsa Marrom', eyebrow: 'Lançamento',
+    intro: 'Visual marcante em tom terroso.',
+    desc: 'Peça tramada em crochê ponto por ponto para acompanhar sua rotina com sofisticação.',
+    mat: 'Fio especial para bolsas', aca: 'Forro interno e fecho seguro',
+    car: 'Estruturada e aconchegante', cri: 'Feita sob encomenda',
+    imgs: ["https://i.postimg.cc/rwXmCtwD/Whats-App-Image-2026-10-06-at-14-15-17-(2).jpg"]
+  },
+  'almofada-boho': {
+    title: 'Toalhinha Trabalhada', eyebrow: 'Decoração',
+    intro: 'Um detalhe refinado em ponto filê.',
+    desc: 'Toalhinha rústica e elegante para decorar mesas, aparadores ou bancadas.',
+    mat: 'Fio de algodão crú refinado', aca: 'Borda rendada e desenhos em relevo',
+    car: 'Fácil de lavar, elegante', cri: 'Pronta entrega',
+    imgs: ["https://i.postimg.cc/76ydKwTN/Whats-App-Image-2026-10-06-at-14-15-17.jpg"]
+  },
+  'cesto-decor': {
+    title: 'Kit Mesa Flor', eyebrow: 'Mais Vendido',
+    intro: 'Mesa posta com trilho e sousplats floridos.',
+    desc: 'Conjunto artesanal com detalhes em flores de crochê para momentos especiais em família.',
+    mat: 'Fio de algodão natural com flores coloridas', aca: 'Borda ondulada reforçada',
+    car: 'Resistente e fácil de manter', cri: 'Feito em pequenas levas',
+    imgs: ["https://i.postimg.cc/jdk1Gz75/Whats-App-Image-2026-10-06-at-14-15-18-(1).jpg"]
+  }
+};
+
+let currentImgs = [];
+
+function showProduct(id){
+  const prod = produtos[id];
+  if(!prod) return;
+  
+  document.getElementById('prod-title').innerText = prod.title;
+  document.getElementById('prod-eyebrow').innerText = prod.eyebrow;
+  document.getElementById('prod-intro').innerText = prod.intro;
+  document.getElementById('prod-desc').innerText = prod.desc;
+  document.getElementById('prod-mat').innerText = prod.mat;
+  document.getElementById('prod-aca').innerText = prod.aca;
+  document.getElementById('prod-car').innerText = prod.car;
+  document.getElementById('prod-cri').innerText = prod.cri;
+
+  if (prod.imgs && prod.imgs.length > 0) {
+    document.getElementById('prod-mainImg').src = prod.imgs[0];
+  }
+
+  const wppText = encodeURIComponent(`Olá! Gostaria de encomendar a peça *${prod.title}* vista na vitrine do Diana Crochê.`);
+  document.getElementById('prod-wpp-btn').href = `https://wa.me/${PHONE_NUMBER}?text=${wppText}`;
+
+  document.getElementById('home').style.display = 'none';
+  document.querySelector('.product').classList.add('active');
+  window.scrollTo(0,0);
+}
+
+function showHome(){
+  document.getElementById('home').style.display = 'block';
+  document.querySelector('.product').classList.remove('active');
+  window.scrollTo(0,0);
+}
+
+function changeImg(btn, index){
+  document.querySelectorAll('#prod-thumbs button').forEach(b => b.classList.remove('sel'));
+  btn.classList.add('sel');
+  const imgInside = btn.querySelector('img');
+  if (imgInside && imgInside.src) {
+    document.getElementById('prod-mainImg').src = imgInside.src;
+  }
+}
+
+function iniciarRolagemInfinita(id) {
+  const grid = document.getElementById(id);
+  if(!grid) return;
+  
+  grid.innerHTML += grid.innerHTML; 
+
+  let isInteracting = false;
+  let scrollSpeed = 0.5;
+
+  function step() {
+    if (!isInteracting) {
+      grid.scrollLeft += scrollSpeed;
+      if (grid.scrollLeft >= grid.scrollWidth / 2) {
+        grid.scrollLeft = 0; 
+      }
+    }
+    requestAnimationFrame(step);
+  }
+
+  const stopAuto = () => { isInteracting = true; };
+  const startAuto = () => { isInteracting = false; };
+
+  grid.addEventListener('mouseenter', stopAuto);
+  grid.addEventListener('mouseleave', startAuto);
+  grid.addEventListener('touchstart', stopAuto, {passive: true});
+  grid.addEventListener('touchend', startAuto);
+  grid.addEventListener('wheel', stopAuto);
+
+  requestAnimationFrame(step);
+}
 </script>
-</body></html>
+</body>
+</html>
